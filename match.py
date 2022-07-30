@@ -35,7 +35,7 @@ knn_matches = matcher.knnMatch(des1, des2, 2)
 
 good = []
 for m, n in knn_matches:
-    if m.distance < 0.6 * n.distance:
+    if m.distance < 0.7 * n.distance:
         good.append(m)
 
 if False:
