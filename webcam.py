@@ -9,7 +9,7 @@ async def run():
         msg = await ws.recv()
         data = json.loads(msg)["frame"].split("base64,")[1]
 
-        with open("calibration.jpg", "wb") as fh:
+        with open("data/calibration.jpg", "wb") as fh:
             fh.write(base64.b64decode(data))
 
 asyncio.run(run())

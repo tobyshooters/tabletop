@@ -17,7 +17,7 @@ def np_to_pygame(arr):
 if __name__ == "__main__":
 
     if len(sys.argv) != 2:
-        print("Usage: python3 get_cal2table.py [calibration.png]")
+        print("Usage: python3 calibrate.py [calibration.png]")
         exit()
 
     path = sys.argv[1]
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                         mode = "TABULA_RASA"
 
                 elif mouse[0] > win_w - 50 and mouse[1] > win_h - 60:
-                    with open('cal2table.npy', 'wb') as f:
+                    with open('data/cal2table.npy', 'wb') as f:
                         np.save(f, H)
 
                 # Collect correspondences for homography
